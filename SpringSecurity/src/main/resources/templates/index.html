@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/user/userpage}" method="get">
+    <button type="Submit">User Page</button>
+</form>
+<form th:action="@{/admin/home}" method="get">
+    <button type="Submit">Admin</button>
+</form>
+<form th:action="@{/logout}" method="get">
+        <button name="registration"
+                type="Submit">Logout
+        </button>
+    </form>
+
+</body>
+</html>

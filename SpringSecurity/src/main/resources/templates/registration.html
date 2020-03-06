@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Form</title>
+    
+</head>
+<body>
+<form th:action="@{/}" method="get">
+    <button type="Submit">Go To Login Page</button>
+</form>
+
+
+            <form action="#" th:action="@{/registration}"
+                  th:object="${user}" method="post" 
+                  role="form">
+                <h2>Registration Form</h2>
+                
+                    <div>
+                        <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></label>
+                        <input type="text" th:field="*{name}" placeholder="Name"/>
+                    </div>
+                
+
+                
+                    <div>
+                        <label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{lastName}"
+                               placeholder="Last Name" class="form-control"/>
+                    </div>
+                
+                
+                    <div>
+                        <input type="text" th:field="*{email}" placeholder="Email"/> 
+                        <label
+                            th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+                    </div>
+                
+                
+                    <div>
+                        <input type="text" th:field="*{userName}" placeholder="User Name"
+                               class="form-control"/> <label
+                            th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"
+                            class="validation-message"></label>
+                    </div>
+               
+                
+                    <div>
+                        <input type="password" th:field="*{password}"
+                               placeholder="Password" class="form-control"/> <label
+                            th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                            ></label>
+                    </div>
+               
+
+                
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-block">Register User</button>
+                    </div>
+                
+
+                
+
+            </form>
+
+</body>
+</html>
