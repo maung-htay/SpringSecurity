@@ -18,6 +18,7 @@ public class Role {
     @Column(name = "role")
     private String role;
 	
+    //Getter and Setter
 	public Long getId() {
 		return id;
 	}
